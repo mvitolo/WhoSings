@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,12 +11,32 @@
 		5E78FC0AC275A589D4BF8D7F /* Pods_WhoSingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE6A32FAC292D1132AADB5E /* Pods_WhoSingsTests.framework */; };
 		725DDDD525C87C2200304BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDDD425C87C2200304BBC /* AppDelegate.swift */; };
 		725DDDD725C87C2200304BBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDDD625C87C2200304BBC /* SceneDelegate.swift */; };
-		725DDDD925C87C2200304BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDDD825C87C2200304BBC /* ViewController.swift */; };
-		725DDDDC25C87C2200304BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725DDDDA25C87C2200304BBC /* Main.storyboard */; };
+		725DDDD925C87C2200304BBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDDD825C87C2200304BBC /* MainViewController.swift */; };
 		725DDDDE25C87C2400304BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725DDDDD25C87C2400304BBC /* Assets.xcassets */; };
 		725DDDE125C87C2400304BBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725DDDDF25C87C2400304BBC /* LaunchScreen.storyboard */; };
 		725DDDEC25C87C2500304BBC /* WhoSingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDDEB25C87C2500304BBC /* WhoSingsTests.swift */; };
 		725DDDF725C87C2500304BBC /* WhoSingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDDF625C87C2500304BBC /* WhoSingsUITests.swift */; };
+		725DDE2925C8818700304BBC /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE2825C8818700304BBC /* Track.swift */; };
+		725DDE2F25C8830D00304BBC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE2E25C8830D00304BBC /* API.swift */; };
+		725DDE3525C883B500304BBC /* ApiClientAlamoFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE3425C883B500304BBC /* ApiClientAlamoFire.swift */; };
+		725DDE3A25C8879900304BBC /* API+chart.tracks.get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE3925C8879900304BBC /* API+chart.tracks.get.swift */; };
+		725DDE3F25C8899D00304BBC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE3E25C8899D00304BBC /* Model.swift */; };
+		725DDE4425C8950700304BBC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4325C8950700304BBC /* Message.swift */; };
+		725DDE4925C8A3ED00304BBC /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4825C8A3ED00304BBC /* Body.swift */; };
+		725DDE4F25C942AE00304BBC /* API+chart.tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4E25C942AE00304BBC /* API+chart.tracks.swift */; };
+		72CE366025CECA4000E485E5 /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE365F25CECA4000E485E5 /* ModelTest.swift */; };
+		72CE367025CED8D600E485E5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE366F25CED8D600E485E5 /* Card.swift */; };
+		72CE367825CEE42600E485E5 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE367725CEE42600E485E5 /* QuizViewModel.swift */; };
+		72CE367D25CEF5FE00E485E5 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE367C25CEF5FE00E485E5 /* Artist.swift */; };
+		72CE368225CEF61200E485E5 /* API+chart.artists.get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE368125CEF61200E485E5 /* API+chart.artists.get.swift */; };
+		72CE369225CF0C6600E485E5 /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE369125CF0C6600E485E5 /* Lyrics.swift */; };
+		72CE369725CFE80500E485E5 /* ArtistsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE369625CFE80500E485E5 /* ArtistsProvider.swift */; };
+		72CE369C25CFEAAD00E485E5 /* API+track.lyrics.get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE369B25CFEAAD00E485E5 /* API+track.lyrics.get.swift */; };
+		72CE36A125D03B0300E485E5 /* LyricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36A025D03B0300E485E5 /* LyricsProvider.swift */; };
+		72DF161625CD72BE00CBBC76 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF161525CD72BE00CBBC76 /* QuizViewController.swift */; };
+		72DF161F25CD748400CBBC76 /* UIViewControllers+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF161E25CD748400CBBC76 /* UIViewControllers+utils.swift */; };
+		72DF163225CEAAB100CBBC76 /* SongsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF163125CEAAB100CBBC76 /* SongsProvider.swift */; };
+		72DF164725CEBF3B00CBBC76 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */; };
 		CE04D7FC8CD9A48DC9E73651 /* Pods_WhoSings_WhoSingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73193A06265E8AC340EF980E /* Pods_WhoSings_WhoSingsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +66,7 @@
 		725DDDD125C87C2200304BBC /* WhoSings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoSings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725DDDD425C87C2200304BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		725DDDD625C87C2200304BBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		725DDDD825C87C2200304BBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		725DDDDB25C87C2200304BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		725DDDD825C87C2200304BBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		725DDDDD25C87C2400304BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		725DDDE025C87C2400304BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		725DDDE225C87C2400304BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +76,27 @@
 		725DDDF225C87C2500304BBC /* WhoSingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoSingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		725DDDF625C87C2500304BBC /* WhoSingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoSingsUITests.swift; sourceTree = "<group>"; };
 		725DDDF825C87C2500304BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		725DDE2825C8818700304BBC /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		725DDE2E25C8830D00304BBC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		725DDE3425C883B500304BBC /* ApiClientAlamoFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientAlamoFire.swift; sourceTree = "<group>"; };
+		725DDE3925C8879900304BBC /* API+chart.tracks.get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.tracks.get.swift"; sourceTree = "<group>"; };
+		725DDE3E25C8899D00304BBC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		725DDE4325C8950700304BBC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		725DDE4825C8A3ED00304BBC /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
+		725DDE4E25C942AE00304BBC /* API+chart.tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.tracks.swift"; sourceTree = "<group>"; };
+		72CE365F25CECA4000E485E5 /* ModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
+		72CE366F25CED8D600E485E5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		72CE367725CEE42600E485E5 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		72CE367C25CEF5FE00E485E5 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		72CE368125CEF61200E485E5 /* API+chart.artists.get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.artists.get.swift"; sourceTree = "<group>"; };
+		72CE369125CF0C6600E485E5 /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
+		72CE369625CFE80500E485E5 /* ArtistsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsProvider.swift; sourceTree = "<group>"; };
+		72CE369B25CFEAAD00E485E5 /* API+track.lyrics.get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+track.lyrics.get.swift"; sourceTree = "<group>"; };
+		72CE36A025D03B0300E485E5 /* LyricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsProvider.swift; sourceTree = "<group>"; };
+		72DF161525CD72BE00CBBC76 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		72DF161E25CD748400CBBC76 /* UIViewControllers+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+utils.swift"; sourceTree = "<group>"; };
+		72DF163125CEAAB100CBBC76 /* SongsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsProvider.swift; sourceTree = "<group>"; };
+		72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		73193A06265E8AC340EF980E /* Pods_WhoSings_WhoSingsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoSings_WhoSingsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F4D70B34F6CE9AA3CC4384 /* Pods-WhoSingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoSingsTests.debug.xcconfig"; path = "Target Support Files/Pods-WhoSingsTests/Pods-WhoSingsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFE70093CE215D4C2402262D /* Pods-WhoSings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoSings.release.xcconfig"; path = "Target Support Files/Pods-WhoSings/Pods-WhoSings.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +141,6 @@
 				77F4D70B34F6CE9AA3CC4384 /* Pods-WhoSingsTests.debug.xcconfig */,
 				46E86D38419E3BC033B62F3E /* Pods-WhoSingsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,10 +179,15 @@
 		725DDDD325C87C2200304BBC /* WhoSings */ = {
 			isa = PBXGroup;
 			children = (
+				72CE366E25CED8C300E485E5 /* Views */,
+				72DF162F25CEAA9200CBBC76 /* Engine */,
+				72DF161D25CD744200CBBC76 /* Extensions */,
+				72DF15FB25CD68C300CBBC76 /* ViewControllers */,
+				725DDE3325C8839C00304BBC /* APIClient */,
+				725DDE2D25C882FE00304BBC /* API */,
+				725DDE2425C8813600304BBC /* Model */,
 				725DDDD425C87C2200304BBC /* AppDelegate.swift */,
 				725DDDD625C87C2200304BBC /* SceneDelegate.swift */,
-				725DDDD825C87C2200304BBC /* ViewController.swift */,
-				725DDDDA25C87C2200304BBC /* Main.storyboard */,
 				725DDDDD25C87C2400304BBC /* Assets.xcassets */,
 				725DDDDF25C87C2400304BBC /* LaunchScreen.storyboard */,
 				725DDDE225C87C2400304BBC /* Info.plist */,
@@ -154,6 +198,8 @@
 		725DDDEA25C87C2500304BBC /* WhoSingsTests */ = {
 			isa = PBXGroup;
 			children = (
+				72CE365E25CECA4000E485E5 /* Model */,
+				725DDE4D25C9304700304BBC /* API */,
 				725DDDEB25C87C2500304BBC /* WhoSingsTests.swift */,
 				725DDDED25C87C2500304BBC /* Info.plist */,
 			);
@@ -169,6 +215,91 @@
 			path = WhoSingsUITests;
 			sourceTree = "<group>";
 		};
+		725DDE2425C8813600304BBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				725DDE2825C8818700304BBC /* Track.swift */,
+				725DDE3E25C8899D00304BBC /* Model.swift */,
+				725DDE4325C8950700304BBC /* Message.swift */,
+				725DDE4825C8A3ED00304BBC /* Body.swift */,
+				72CE367C25CEF5FE00E485E5 /* Artist.swift */,
+				72CE369125CF0C6600E485E5 /* Lyrics.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		725DDE2D25C882FE00304BBC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				725DDE2E25C8830D00304BBC /* API.swift */,
+				725DDE3925C8879900304BBC /* API+chart.tracks.get.swift */,
+				72CE368125CEF61200E485E5 /* API+chart.artists.get.swift */,
+				72CE369B25CFEAAD00E485E5 /* API+track.lyrics.get.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		725DDE3325C8839C00304BBC /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				725DDE3425C883B500304BBC /* ApiClientAlamoFire.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		725DDE4D25C9304700304BBC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				725DDE4E25C942AE00304BBC /* API+chart.tracks.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		72CE365E25CECA4000E485E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72CE365F25CECA4000E485E5 /* ModelTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72CE366E25CED8C300E485E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72CE366F25CED8D600E485E5 /* Card.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		72DF15FB25CD68C300CBBC76 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				725DDDD825C87C2200304BBC /* MainViewController.swift */,
+				72DF161525CD72BE00CBBC76 /* QuizViewController.swift */,
+				72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */,
+				72CE367725CEE42600E485E5 /* QuizViewModel.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		72DF161D25CD744200CBBC76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				72DF161E25CD748400CBBC76 /* UIViewControllers+utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		72DF162F25CEAA9200CBBC76 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				72DF163125CEAAB100CBBC76 /* SongsProvider.swift */,
+				72CE369625CFE80500E485E5 /* ArtistsProvider.swift */,
+				72CE36A025D03B0300E485E5 /* LyricsProvider.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +311,7 @@
 				725DDDCD25C87C2200304BBC /* Sources */,
 				725DDDCE25C87C2200304BBC /* Frameworks */,
 				725DDDCF25C87C2200304BBC /* Resources */,
+				3319E1A3656DCD5E68C9BF6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +330,7 @@
 				725DDDE325C87C2500304BBC /* Sources */,
 				725DDDE425C87C2500304BBC /* Frameworks */,
 				725DDDE525C87C2500304BBC /* Resources */,
+				E2F8533B005879B14EF3E120 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +350,7 @@
 				725DDDEE25C87C2500304BBC /* Sources */,
 				725DDDEF25C87C2500304BBC /* Frameworks */,
 				725DDDF025C87C2500304BBC /* Resources */,
+				7AB00808A71ACC53B7359817 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,7 +411,6 @@
 			files = (
 				725DDDE125C87C2400304BBC /* LaunchScreen.storyboard in Resources */,
 				725DDDDE25C87C2400304BBC /* Assets.xcassets in Resources */,
-				725DDDDC25C87C2200304BBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +431,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3319E1A3656DCD5E68C9BF6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoSings/Pods-WhoSings-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoSings/Pods-WhoSings-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoSings/Pods-WhoSings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4C96296D1DB2A7CAAE4EC4C5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +492,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7AB00808A71ACC53B7359817 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoSings-WhoSingsUITests/Pods-WhoSings-WhoSingsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoSings-WhoSingsUITests/Pods-WhoSings-WhoSingsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoSings-WhoSingsUITests/Pods-WhoSings-WhoSingsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2F8533B005879B14EF3E120 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoSingsTests/Pods-WhoSingsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoSingsTests/Pods-WhoSingsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoSingsTests/Pods-WhoSingsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F0F68054822BFF22E9208E5E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,9 +555,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				725DDDD925C87C2200304BBC /* ViewController.swift in Sources */,
+				725DDDD925C87C2200304BBC /* MainViewController.swift in Sources */,
+				72CE369225CF0C6600E485E5 /* Lyrics.swift in Sources */,
 				725DDDD525C87C2200304BBC /* AppDelegate.swift in Sources */,
+				72DF161F25CD748400CBBC76 /* UIViewControllers+utils.swift in Sources */,
+				72CE367825CEE42600E485E5 /* QuizViewModel.swift in Sources */,
+				72CE369725CFE80500E485E5 /* ArtistsProvider.swift in Sources */,
+				725DDE3A25C8879900304BBC /* API+chart.tracks.get.swift in Sources */,
+				72DF163225CEAAB100CBBC76 /* SongsProvider.swift in Sources */,
+				725DDE4425C8950700304BBC /* Message.swift in Sources */,
+				725DDE3525C883B500304BBC /* ApiClientAlamoFire.swift in Sources */,
+				72CE367025CED8D600E485E5 /* Card.swift in Sources */,
+				72DF164725CEBF3B00CBBC76 /* MainViewModel.swift in Sources */,
+				725DDE4925C8A3ED00304BBC /* Body.swift in Sources */,
 				725DDDD725C87C2200304BBC /* SceneDelegate.swift in Sources */,
+				72CE369C25CFEAAD00E485E5 /* API+track.lyrics.get.swift in Sources */,
+				725DDE2925C8818700304BBC /* Track.swift in Sources */,
+				72CE36A125D03B0300E485E5 /* LyricsProvider.swift in Sources */,
+				72CE368225CEF61200E485E5 /* API+chart.artists.get.swift in Sources */,
+				725DDE2F25C8830D00304BBC /* API.swift in Sources */,
+				72CE367D25CEF5FE00E485E5 /* Artist.swift in Sources */,
+				72DF161625CD72BE00CBBC76 /* QuizViewController.swift in Sources */,
+				725DDE3F25C8899D00304BBC /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +584,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CE366025CECA4000E485E5 /* ModelTest.swift in Sources */,
+				725DDE4F25C942AE00304BBC /* API+chart.tracks.swift in Sources */,
 				725DDDEC25C87C2500304BBC /* WhoSingsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,14 +614,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		725DDDDA25C87C2200304BBC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				725DDDDB25C87C2200304BBC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		725DDDDF25C87C2400304BBC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

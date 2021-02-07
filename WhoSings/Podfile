@@ -4,16 +4,40 @@
 target 'WhoSings' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for WhoSings
-
+  pod 'Alamofire', '~> 5.0'
+  pod 'ReactiveSwift', '~> 6.5'
+  pod 'UIKit-Plus', '~> 2.0.0-alpha.1.7.8'
+  
   target 'WhoSingsTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Mockingjay/Core', '~> 2.0'
+    pod 'Nimble', '~> 9.0'
   end
 
   target 'WhoSingsUITests' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+        fix_swift_version installer
+end
+
+def fix_swift_version(installer)
+        swift_4_1 = ['URITemplate']
+
+        installer.pods_project.targets.each do |target|
+                swift_version = nil
+
+                if swift_4_1.include?(target.name)
+                        swift_version = '4.1'
+                end
+
+                if swift_version
+                        target.build_configurations.each do |config|
+                        config.build_settings['SWIFT_VERSION'] = swift_version
+                        end
+                end
+        end
 end
