@@ -6,6 +6,7 @@
 //
 import UIKit
 import UIKitPlus
+import NotificationBannerSwift
 
 class QuizViewController: ViewController {
 
@@ -36,33 +37,58 @@ class QuizViewController: ViewController {
                 } else {
                     self.body {
                         UVScrollStack {
-                           UText()
-                            .text("🎤")
-                            .alignment(.center)
-                            .widthToSuperview()
-
-                           UText()
-                            .text("Who Sings....")
-                            .alignment(.center)
-                            .widthToSuperview()
-
-                           UText()
-                            .text(self.viewModel.lyrics() ?? "")
-                            .alignment(.center)
-                            .widthToSuperview()
-                         
                             UVSpace(20)
+                            UText()
+                                .text("🎤")
+                                .font(.helveticaNeueBold, 80)
+                                .alignment(.center)
+                                .widthToSuperview()
                             
-                           self.viewModel.randomArtists()
-                                    .map {
-                                        UButton()
-                                            .title($0.name)
-                                    }
-           
+                            UText()
+                                .text("Who Sings....")
+                                .font(.helveticaNeueBold, 30)
+                                .adjustsFontSizeToFitWidth(true)
+                                .alignment(.center)
+                                .widthToSuperview()
+                            
+                            UVSpace(30)
+                            
+                            UVStack {
+                                UVSpace(16)
+
+                                UText()
+                                    .text(self.viewModel.lyrics() ?? "")
+                                    .font(.helveticaNeueRegular, 24)
+                                    .lines(2)
+                                    .alignment(.center)
+                                    .widthToSuperview()
+                                
+                                UVSpace(15)
+                            }
+                            .widthToSuperview()
+                            .border(1, .darkGray)
+                            
+                            UVSpace(30)
+                            
+                            self.viewModel.randomArtists()
+                                .map { answer in
+                                    UButton()
+                                        .title(answer.name)
+                                        .onTapGesture { 
+                                            let banner = NotificationBanner(
+                                                title: "Who Sings",
+                                                subtitle: answer.right ? "Right" : "Wrong",
+                                                style: answer.right ? .success : .warning)
+                                            banner.show()
+                                        }
+                                }
+                            
                         }
-                        .widthToSuperview()
                         .topToSuperview()
                         .bottomToSuperview()
+                        .centerXInSuperview()
+                        .edgesToSuperview(leading: 16, trailing: -16)
+
                     }
                 }
             }

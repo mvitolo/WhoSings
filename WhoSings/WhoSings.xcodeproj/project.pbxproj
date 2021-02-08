@@ -34,8 +34,8 @@
 		72CE369C25CFEAAD00E485E5 /* API+track.lyrics.get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE369B25CFEAAD00E485E5 /* API+track.lyrics.get.swift */; };
 		72CE36A125D03B0300E485E5 /* LyricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36A025D03B0300E485E5 /* LyricsProvider.swift */; };
 		72CE36A625D12C9600E485E5 /* ApiClientLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36A525D12C9600E485E5 /* ApiClientLocal.swift */; };
+		72CE36AB25D1537E00E485E5 /* FontIdentifiers+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36AA25D1537E00E485E5 /* FontIdentifiers+Utils.swift */; };
 		72DF161625CD72BE00CBBC76 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF161525CD72BE00CBBC76 /* QuizViewController.swift */; };
-		72DF161F25CD748400CBBC76 /* UIViewControllers+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF161E25CD748400CBBC76 /* UIViewControllers+utils.swift */; };
 		72DF163225CEAAB100CBBC76 /* SongsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF163125CEAAB100CBBC76 /* SongsProvider.swift */; };
 		72DF164725CEBF3B00CBBC76 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */; };
 		CE04D7FC8CD9A48DC9E73651 /* Pods_WhoSings_WhoSingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73193A06265E8AC340EF980E /* Pods_WhoSings_WhoSingsUITests.framework */; };
@@ -95,8 +95,8 @@
 		72CE369B25CFEAAD00E485E5 /* API+track.lyrics.get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+track.lyrics.get.swift"; sourceTree = "<group>"; };
 		72CE36A025D03B0300E485E5 /* LyricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsProvider.swift; sourceTree = "<group>"; };
 		72CE36A525D12C9600E485E5 /* ApiClientLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientLocal.swift; sourceTree = "<group>"; };
+		72CE36AA25D1537E00E485E5 /* FontIdentifiers+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontIdentifiers+Utils.swift"; sourceTree = "<group>"; };
 		72DF161525CD72BE00CBBC76 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		72DF161E25CD748400CBBC76 /* UIViewControllers+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+utils.swift"; sourceTree = "<group>"; };
 		72DF163125CEAAB100CBBC76 /* SongsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsProvider.swift; sourceTree = "<group>"; };
 		72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		73193A06265E8AC340EF980E /* Pods_WhoSings_WhoSingsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoSings_WhoSingsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,7 +288,7 @@
 		72DF161D25CD744200CBBC76 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				72DF161E25CD748400CBBC76 /* UIViewControllers+utils.swift */,
+				72CE36AA25D1537E00E485E5 /* FontIdentifiers+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -561,10 +561,10 @@
 				725DDDD925C87C2200304BBC /* MainViewController.swift in Sources */,
 				72CE369225CF0C6600E485E5 /* Lyrics.swift in Sources */,
 				725DDDD525C87C2200304BBC /* AppDelegate.swift in Sources */,
-				72DF161F25CD748400CBBC76 /* UIViewControllers+utils.swift in Sources */,
 				72CE367825CEE42600E485E5 /* QuizViewModel.swift in Sources */,
 				72CE369725CFE80500E485E5 /* ArtistsProvider.swift in Sources */,
 				725DDE3A25C8879900304BBC /* API+chart.tracks.get.swift in Sources */,
+				72CE36AB25D1537E00E485E5 /* FontIdentifiers+Utils.swift in Sources */,
 				72DF163225CEAAB100CBBC76 /* SongsProvider.swift in Sources */,
 				725DDE4425C8950700304BBC /* Message.swift in Sources */,
 				725DDE3525C883B500304BBC /* ApiClientAlamoFire.swift in Sources */,
