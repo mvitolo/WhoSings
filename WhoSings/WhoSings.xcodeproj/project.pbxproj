@@ -23,7 +23,7 @@
 		725DDE3F25C8899D00304BBC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE3E25C8899D00304BBC /* Model.swift */; };
 		725DDE4425C8950700304BBC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4325C8950700304BBC /* Message.swift */; };
 		725DDE4925C8A3ED00304BBC /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4825C8A3ED00304BBC /* Body.swift */; };
-		725DDE4F25C942AE00304BBC /* API+chart.tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4E25C942AE00304BBC /* API+chart.tracks.swift */; };
+		725DDE4F25C942AE00304BBC /* API+chart.tracks-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4E25C942AE00304BBC /* API+chart.tracks-Tests.swift */; };
 		72CE366025CECA4000E485E5 /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE365F25CECA4000E485E5 /* ModelTest.swift */; };
 		72CE367025CED8D600E485E5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE366F25CED8D600E485E5 /* Card.swift */; };
 		72CE367825CEE42600E485E5 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE367725CEE42600E485E5 /* QuizViewModel.swift */; };
@@ -35,6 +35,8 @@
 		72CE36A125D03B0300E485E5 /* LyricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36A025D03B0300E485E5 /* LyricsProvider.swift */; };
 		72CE36A625D12C9600E485E5 /* ApiClientLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36A525D12C9600E485E5 /* ApiClientLocal.swift */; };
 		72CE36AB25D1537E00E485E5 /* FontIdentifiers+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36AA25D1537E00E485E5 /* FontIdentifiers+Utils.swift */; };
+		72CE36C525D15E3600E485E5 /* API+chart.artists.getTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36C425D15E3600E485E5 /* API+chart.artists.getTests.swift */; };
+		72CE36CA25D15E4D00E485E5 /* API+track.lyrics.getTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36C925D15E4D00E485E5 /* API+track.lyrics.getTests.swift */; };
 		72DF161625CD72BE00CBBC76 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF161525CD72BE00CBBC76 /* QuizViewController.swift */; };
 		72DF163225CEAAB100CBBC76 /* SongsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF163125CEAAB100CBBC76 /* SongsProvider.swift */; };
 		72DF164725CEBF3B00CBBC76 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */; };
@@ -84,7 +86,7 @@
 		725DDE3E25C8899D00304BBC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		725DDE4325C8950700304BBC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		725DDE4825C8A3ED00304BBC /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
-		725DDE4E25C942AE00304BBC /* API+chart.tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.tracks.swift"; sourceTree = "<group>"; };
+		725DDE4E25C942AE00304BBC /* API+chart.tracks-Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.tracks-Tests.swift"; sourceTree = "<group>"; };
 		72CE365F25CECA4000E485E5 /* ModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
 		72CE366F25CED8D600E485E5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		72CE367725CEE42600E485E5 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 		72CE36A025D03B0300E485E5 /* LyricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsProvider.swift; sourceTree = "<group>"; };
 		72CE36A525D12C9600E485E5 /* ApiClientLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientLocal.swift; sourceTree = "<group>"; };
 		72CE36AA25D1537E00E485E5 /* FontIdentifiers+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontIdentifiers+Utils.swift"; sourceTree = "<group>"; };
+		72CE36C425D15E3600E485E5 /* API+chart.artists.getTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.artists.getTests.swift"; sourceTree = "<group>"; };
+		72CE36C925D15E4D00E485E5 /* API+track.lyrics.getTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+track.lyrics.getTests.swift"; sourceTree = "<group>"; };
 		72DF161525CD72BE00CBBC76 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		72DF163125CEAAB100CBBC76 /* SongsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsProvider.swift; sourceTree = "<group>"; };
 		72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -253,7 +257,9 @@
 		725DDE4D25C9304700304BBC /* API */ = {
 			isa = PBXGroup;
 			children = (
-				725DDE4E25C942AE00304BBC /* API+chart.tracks.swift */,
+				725DDE4E25C942AE00304BBC /* API+chart.tracks-Tests.swift */,
+				72CE36C425D15E3600E485E5 /* API+chart.artists.getTests.swift */,
+				72CE36C925D15E4D00E485E5 /* API+track.lyrics.getTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -589,7 +595,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				72CE366025CECA4000E485E5 /* ModelTest.swift in Sources */,
-				725DDE4F25C942AE00304BBC /* API+chart.tracks.swift in Sources */,
+				725DDE4F25C942AE00304BBC /* API+chart.tracks-Tests.swift in Sources */,
+				72CE36CA25D15E4D00E485E5 /* API+track.lyrics.getTests.swift in Sources */,
+				72CE36C525D15E3600E485E5 /* API+chart.artists.getTests.swift in Sources */,
 				725DDDEC25C87C2500304BBC /* WhoSingsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
