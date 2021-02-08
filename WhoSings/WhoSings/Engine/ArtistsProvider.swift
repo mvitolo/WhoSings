@@ -17,8 +17,11 @@ class ArtistProvider {
     let artists: MutableProperty<[Model.Artist]> = MutableProperty<[Model.Artist]>([])
     let artistsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
     
+    private let apiClient: APIClient = ApiClientLocal()
+ //   private let apiClient: APIClient = APIClientAlamofire()
+    
     init() {
-        APIClientAlamofire().execute(API.ChartArtistsGet(), completion: { result in
+        apiClient.execute(API.ChartArtistsGet(), completion: { result in
             switch result {
                 case .success(let s) :
                     self.artists.value = s.message

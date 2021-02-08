@@ -12,8 +12,11 @@ class SongsProvider {
     let songs: MutableProperty<[Model.Track]> = MutableProperty<[Model.Track]>([])
     let songsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
     
+    private let apiClient: APIClient = ApiClientLocal()
+ //   private let apiClient: APIClient = APIClientAlamofire()
+
     init() {
-        APIClientAlamofire().execute(API.ChartTracksGet(), completion: { result in
+        apiClient.execute(API.ChartTracksGet(), completion: { result in
             switch result {
                 case .success(let s) :
                     self.songs.value = s.message

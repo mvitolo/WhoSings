@@ -11,9 +11,11 @@ import ReactiveSwift
 class LyricsProvider {
     let lyrics: MutableProperty<[Model.Lyrics]> = MutableProperty<[Model.Lyrics]>([])
     let lyricsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
+    private let apiClient: APIClient = ApiClientLocal()
+ //   private let apiClient: APIClient = APIClientAlamofire()
     
     init(track: Int) {
-        APIClientAlamofire().execute(API.TrackLyricsGet(track), completion: { result in
+        apiClient.execute(API.TrackLyricsGet(track), completion: { result in
             switch result {
                 case .success(let s) :
                     self.lyrics.value = [s.message

@@ -24,6 +24,7 @@ public protocol APIType: Hashable {
     var queryItems: Query? {get}
     var requestBuilder: RequestBuilder {get}
     var apikey: String { get }
+    var dummyResponse: String { get }
 }
 
 extension APIType {
