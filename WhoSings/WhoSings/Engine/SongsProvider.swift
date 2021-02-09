@@ -13,7 +13,9 @@ class SongsProvider {
     let songsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
     
     private let apiClient: APIClient = ApiClientLocal()
- //   private let apiClient: APIClient = APIClientAlamofire()
+//    private let apiClient: APIClient = APIClientAlamofire()
+    
+    private let numberOfTracks = 3
 
     init() {
         apiClient.execute(API.ChartTracksGet(), completion: { result in
@@ -35,8 +37,11 @@ class SongsProvider {
         songsAreReady <~ songs.map { $0.count > 0 }
     }
 
-    func random() -> Model.Track {
-        songs.value[Int.random(in: 0...songs.value.count)]
+    func random() -> [Model.Track] {
+        let r = (0..<numberOfTracks).map {_ in
+            songs.value[Int.random(in: 0...songs.value.count)]
+        }
+        return r
     }
     
     

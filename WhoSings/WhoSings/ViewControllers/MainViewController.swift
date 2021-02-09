@@ -15,6 +15,8 @@ class MainViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    var spinner = UIActivityIndicatorView(style: .medium)
 
     override func buildUI() {
            super.buildUI()
@@ -24,14 +26,17 @@ class MainViewController: ViewController {
                 .producer
                 .startWithValues { isLoading in
                     if (isLoading) {
+                        self.spinner.startAnimating()
                         self.body {
-                            UHUD()
-                                .mode(.activityIndicator)
-                                .indicatorColor(.darkGray)
+                            UWrapperView(self.spinner)
+                                .widthToSuperview()
+                                .heightToSuperview()
                                 .centerXInSuperview()
                                 .centerYInSuperview()
                         }
                     } else {
+                        self.spinner.stopAnimating()
+
                         self.body {
                                UButton()
                                 .title("Let's start! 🎤")
@@ -49,7 +54,7 @@ class MainViewController: ViewController {
        }
 
     func push() {
-        let vm = QuizViewModel(song: viewModel.random())
+        let vm = QuizViewModel(songs: viewModel.random())
         let qvc = QuizViewController(viewModel: vm)
 
         self.navigationController?.pushViewController(qvc, animated: true)

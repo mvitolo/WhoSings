@@ -16,7 +16,7 @@ class MainViewModel {
         isLoading <~ songProvider.songsAreReady.map { !$0 }
     }
     
-    func random() -> Model.Track {
+    func random() -> [Model.Track] {
         songProvider.random()
     }
 }
