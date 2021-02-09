@@ -37,6 +37,7 @@ class LyricsProvider {
     }
     
     func loadTrack(_ value: Int) {
+        lyrics.value = []
         lyricsID.value = value
     }
 }
