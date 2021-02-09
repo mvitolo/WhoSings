@@ -11,12 +11,15 @@ import ReactiveSwift
 class QuizViewModel {
     private let artistsProvider = ArtistProvider()
     private let lyricsProvider: LyricsProvider
-    let song: Model.Track
+    let songs: [Model.Track]
     let isLoading = MutableProperty<Bool>(true)
+    var currentSongIdx = 0
+    var currentSong: Model.Track?
     
-    init(song: Model.Track) {
-        self.song = song
-        self.lyricsProvider = LyricsProvider(track: song.trackID)
+    init(songs: [Model.Track]) {
+        self.songs = songs
+        self.currentSong = songs[currentSongIdx]
+        self.lyricsProvider = LyricsProvider(track: currentSong?.artistID ?? 0)
         isLoading <~ Property.combineLatest(artistsProvider.artistsAreReady, lyricsProvider.lyricsAreReady)
             .map { artists, lyrics -> Bool in
                 !(artists && lyrics)
@@ -28,8 +31,9 @@ class QuizViewModel {
     }
     
     func randomArtists() -> [ArtistProvider.Answer] {
-        artistsProvider
-            .random(winner: self.song.artistID)
-            .shuffled()
+        guard let artistID = self.currentSong?.artistID else { return [] }
+        return artistsProvider
+                .random(winner: artistID)
+                .shuffled()
     }
 }
