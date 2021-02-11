@@ -7,8 +7,9 @@ target 'WhoSings' do
   pod 'Alamofire', '~> 5.0'
   pod 'ReactiveSwift', '~> 6.5'
   pod 'UIKit-Plus', '~> 2.0.0-alpha.1.7.8'
-  pod 'NotificationBannerSwift', '~> 3.0.0'
-  
+  pod 'SQLite.swift', '~> 0.12.0'  
+  pod 'Alertift', '~> 4.2' 
+
   target 'WhoSingsTests' do
     inherit! :search_paths
     pod 'Mockingjay/Core', '~> 2.0'
