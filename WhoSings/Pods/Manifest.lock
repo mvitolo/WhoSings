@@ -1,48 +1,46 @@
 PODS:
   - Alamofire (5.4.0)
-  - MarqueeLabel (4.0.5)
+  - Alertift (4.2.0)
   - Mockingjay/Core (2.0.1):
     - URITemplate (~> 2.0)
   - Nimble (9.0.0)
-  - NotificationBannerSwift (3.0.6):
-    - MarqueeLabel (~> 4.0.5)
-    - SnapKit (~> 5.0.1)
   - ReactiveSwift (6.5.0)
-  - SnapKit (5.0.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - UIKit-Plus (2.0.0-alpha.1.7.8)
   - URITemplate (2.0.3)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
+  - Alertift (~> 4.2)
   - Mockingjay/Core (~> 2.0)
   - Nimble (~> 9.0)
-  - NotificationBannerSwift (~> 3.0.0)
   - ReactiveSwift (~> 6.5)
+  - SQLite.swift (~> 0.12.0)
   - UIKit-Plus (~> 2.0.0-alpha.1.7.8)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - MarqueeLabel
+    - Alertift
     - Mockingjay
     - Nimble
-    - NotificationBannerSwift
     - ReactiveSwift
-    - SnapKit
+    - SQLite.swift
     - UIKit-Plus
     - URITemplate
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
-  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  Alertift: 17b37be915cd28edeceabd438e4134d041ea825c
   Mockingjay: 11a621880d2887f1775bdcf824341eb68f218450
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
-  NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   ReactiveSwift: 8d159904084e908856cde90b2e28823f3c7e485f
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   UIKit-Plus: c33a78f8ba55a1d927faf734af73de8754639850
   URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
 
-PODFILE CHECKSUM: b12e2778b5ccd2af0a45ae74a67621d2fdf15d7b
+PODFILE CHECKSUM: 7327b4d239438d6a7a215517b2df7249d0186240
 
 COCOAPODS: 1.10.1

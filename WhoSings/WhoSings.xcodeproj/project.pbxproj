@@ -37,6 +37,7 @@
 		72CE36AB25D1537E00E485E5 /* FontIdentifiers+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36AA25D1537E00E485E5 /* FontIdentifiers+Utils.swift */; };
 		72CE36C525D15E3600E485E5 /* API+chart.artists.getTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36C425D15E3600E485E5 /* API+chart.artists.getTests.swift */; };
 		72CE36CA25D15E4D00E485E5 /* API+track.lyrics.getTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE36C925D15E4D00E485E5 /* API+track.lyrics.getTests.swift */; };
+		72CE373B25D47DCC00E485E5 /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE373A25D47DCC00E485E5 /* DBProvider.swift */; };
 		72DF161625CD72BE00CBBC76 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF161525CD72BE00CBBC76 /* QuizViewController.swift */; };
 		72DF163225CEAAB100CBBC76 /* SongsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF163125CEAAB100CBBC76 /* SongsProvider.swift */; };
 		72DF164725CEBF3B00CBBC76 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */; };
@@ -100,6 +101,7 @@
 		72CE36AA25D1537E00E485E5 /* FontIdentifiers+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontIdentifiers+Utils.swift"; sourceTree = "<group>"; };
 		72CE36C425D15E3600E485E5 /* API+chart.artists.getTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.artists.getTests.swift"; sourceTree = "<group>"; };
 		72CE36C925D15E4D00E485E5 /* API+track.lyrics.getTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+track.lyrics.getTests.swift"; sourceTree = "<group>"; };
+		72CE373A25D47DCC00E485E5 /* DBProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
 		72DF161525CD72BE00CBBC76 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		72DF163125CEAAB100CBBC76 /* SongsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsProvider.swift; sourceTree = "<group>"; };
 		72DF164625CEBF3B00CBBC76 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				72DF163125CEAAB100CBBC76 /* SongsProvider.swift */,
 				72CE369625CFE80500E485E5 /* ArtistsProvider.swift */,
 				72CE36A025D03B0300E485E5 /* LyricsProvider.swift */,
+				72CE373A25D47DCC00E485E5 /* DBProvider.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				72CE369225CF0C6600E485E5 /* Lyrics.swift in Sources */,
 				725DDDD525C87C2200304BBC /* AppDelegate.swift in Sources */,
 				72CE367825CEE42600E485E5 /* QuizViewModel.swift in Sources */,
+				72CE373B25D47DCC00E485E5 /* DBProvider.swift in Sources */,
 				72CE369725CFE80500E485E5 /* ArtistsProvider.swift in Sources */,
 				725DDE3A25C8879900304BBC /* API+chart.tracks.get.swift in Sources */,
 				72CE36AB25D1537E00E485E5 /* FontIdentifiers+Utils.swift in Sources */,

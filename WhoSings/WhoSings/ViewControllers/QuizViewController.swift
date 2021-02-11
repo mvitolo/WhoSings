@@ -62,7 +62,7 @@ class QuizViewController: ViewController {
     override func buildUI() {
         super.buildUI()
         view.backgroundColor = .white
-        
+                
         self.body {
             UVScrollStack {
                 UVSpace(20)
