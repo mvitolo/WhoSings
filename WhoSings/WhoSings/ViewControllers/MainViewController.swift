@@ -19,6 +19,10 @@ class MainViewController: ViewController {
     
     var spinner = UIActivityIndicatorView(style: .medium)
     
+    private let welcome = UText()
+    private let start = UButton()
+    private let personal = UButton()
+    
     override func buildUI() {
         super.buildUI()
         view.backgroundColor = .white
@@ -41,20 +45,34 @@ class MainViewController: ViewController {
                 } else {
                     self.spinner.stopAnimating()
                     self.body {
-                        UVStack {
-                            UText()
-                                .text(self.viewModel.$welcome)
-                                .font(.helveticaNeueBold, 24)
-                            UButton()
-                                .title("Let's start! 🎤")
-                                .color(.black)
-                                .topToSuperview(44, safeArea: true)
-                                .onTapGesture {
-                                    self.push()
-                                }
-                        }
-                        .centerXInSuperview()
-                        .centerYInSuperview()
+                        self.welcome
+                            .text(self.viewModel.$welcome)
+                            .font(.helveticaNeueBold, 24)
+                            .topToSuperview(44,safeArea: true)
+                            .alignment(.center)
+                            .centerXInSuperview()
+                        self.start
+                            .title("Let's start! 🎤")
+                            .color(.black)
+                            .top(to:self.welcome, 20)
+                            .onTapGesture {
+                                self.pushQuiz()
+                            }
+                            .alignment(.center)
+                            .centerXInSuperview()
+
+                        self.personal
+                            .title("Your Scores 🏆")
+                            .color(.black)
+                            .onTapGesture {
+                                self.pushPersonalScore()
+                            }
+                            .top(to:self.start, 20)
+                            .alignment(.center)
+                            .centerXInSuperview()
+
+
+                            
                         
                         UButton(self.viewModel.$loginText)
                             .alignment(.center)
@@ -70,7 +88,6 @@ class MainViewController: ViewController {
                     }
                 }
             }
-        
     }
     
     func shotAlertForUser() {
@@ -88,9 +105,18 @@ class MainViewController: ViewController {
         }
     }
     
-    func push() {
-        let vm = QuizViewModel(songs: viewModel.random())
+    func pushQuiz() {
+        let vm = QuizViewModel(songs: viewModel.random(), dbProvider: viewModel.dbProvider)
         let qvc = QuizViewController(viewModel: vm)
+        
+        self.navigationController?.pushViewController(qvc, animated: true)
+    }
+    
+    func pushPersonalScore() {
+        let uid = UserDefaults.standard.integer(forKey: "Id")
+
+        let vm = HighScoresViewModel(uid, dbProvider: viewModel.dbProvider)
+        let qvc = HighScoreViewController(viewModel: vm)
         
         self.navigationController?.pushViewController(qvc, animated: true)
     }
