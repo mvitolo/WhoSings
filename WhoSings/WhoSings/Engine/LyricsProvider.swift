@@ -16,7 +16,6 @@ struct SnippetItem {
 class LyricsProvider {
     let lyrics: MutableProperty<[SnippetItem]> = MutableProperty<[SnippetItem]>([])
     let lyricsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
-    let numberOfLyrics = 3
     
 //    private let apiClient: APIClient = ApiClientLocal()
     private let apiClient: APIClient = APIClientAlamofire()
@@ -46,6 +45,6 @@ class LyricsProvider {
         }
     
         
-        lyricsAreReady <~ lyrics.map { $0.count == self.numberOfLyrics }
+        lyricsAreReady <~ lyrics.map { $0.count == tracks.count }
     }
 }

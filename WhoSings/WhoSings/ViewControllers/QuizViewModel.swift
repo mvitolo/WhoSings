@@ -80,7 +80,7 @@ class QuizViewModel {
     
     func moveToNextQuiz(_ answer: Int) {
         
-        if currentSongIdx == (numberOfQuestions - 1){
+        if currentSongIdx == (songs.count - 1){
             if !completed {
                 notification = artists.value[answer].right ? "👍🏻" : "👎🏻"
                 if artists.value[answer].right {
@@ -92,7 +92,9 @@ class QuizViewModel {
             
             let id = UserDefaults.standard.integer(forKey: "Id")
             let name = UserDefaults.standard.string(forKey: "Name") ?? ""
-            dbProvider.hitScore(userID: id, userName: name, points: Int(points) ?? 0)
+            if name != "" {
+                dbProvider.hitScore(userID: id, userName: name, points: Int(points) ?? 0)
+            }
             
             answer1 = ""
             answer2 = ""

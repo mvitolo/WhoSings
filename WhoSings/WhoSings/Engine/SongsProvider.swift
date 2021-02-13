@@ -38,7 +38,7 @@ class SongsProvider {
     }
 
     func random() -> [Model.Track] {
-        return Array(songs.value.shuffled().prefix(3))
+        return Array(songs.value.shuffled().prefix(numberOfTracks))
     }
     
     
