@@ -62,20 +62,8 @@ class QuizViewController: ViewController {
     override func buildUI() {
         super.buildUI()
         view.backgroundColor = .white
-                
-//        viewModel.isLoading.producer
-//            .skipRepeats()
-//            .startWithValues { isLoading in
-//                if isLoading {
-//                    self.loadingBody()
-//                } else {
-                    self.loadedBody()
-//                }
-//            }
-    }
     
-    private func loadingBody() {
-        
+        self.loadedBody()
     }
     
     private func loadedBody() {
@@ -143,9 +131,5 @@ class QuizViewController: ViewController {
             .edgesToSuperview(leading: 16, trailing: -16)
             
         }
-    }
-
-    func push() {
-        self.present(UIViewController(), animated: false)
     }
 }

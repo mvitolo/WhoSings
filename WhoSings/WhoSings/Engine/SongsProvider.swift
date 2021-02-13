@@ -38,11 +38,7 @@ class SongsProvider {
     }
 
     func random() -> [Model.Track] {
-        let r: [Model.Track] = (0..<numberOfTracks).map {_ in
-            let counter = (songs.value.count - 1)
-            return songs.value[Int.random(in: 0...counter)]
-        }
-        return r
+        return Array(songs.value.shuffled().prefix(3))
     }
     
     

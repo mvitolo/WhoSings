@@ -14,12 +14,14 @@ class QuizViewModel {
     private let lyricsProvider: LyricsProvider
     private let dbProvider: DBProvider
     private var completed = false
+    private let numberOfQuestions = 3
 
     let songs: [Model.Track]
     let isLoading = MutableProperty<Bool>(true)
     let lyricsAreReady = MutableProperty<Bool>(false)
     var currentSongIdx = 0
     var currentSong: Model.Track?
+    
     
     @UState var lyrics = ""
     @UState var notification = "🎤"
@@ -38,7 +40,12 @@ class QuizViewModel {
         self.dbProvider = dbProvider
         self.songs = songs
         self.currentSong = songs[currentSongIdx]
-        self.lyricsProvider = LyricsProvider(track: currentSong?.artistID ?? 0)
+        self.lyricsProvider = LyricsProvider(tracks: self
+                                                .songs
+                                                .map{
+                                                    $0.trackID
+                                                }
+        )
         self.lyricsAreReady <~ lyricsProvider.lyricsAreReady
         isLoading <~ Property.combineLatest(artistsProvider.artistsAreReady, lyricsProvider.lyricsAreReady)
             .map { artists, lyrics -> Bool in
@@ -64,8 +71,6 @@ class QuizViewModel {
         }
     }
     
-
-    
     private func randomArtists() -> [ArtistProvider.Answer] {
         guard let artistID = self.currentSong?.artistID else { return [] }
         return artistsProvider
@@ -75,7 +80,7 @@ class QuizViewModel {
     
     func moveToNextQuiz(_ answer: Int) {
         
-        if currentSongIdx == songs.count - 1 {
+        if currentSongIdx == (numberOfQuestions - 1){
             if !completed {
                 notification = artists.value[answer].right ? "👍🏻" : "👎🏻"
                 if artists.value[answer].right {
@@ -105,6 +110,12 @@ class QuizViewModel {
         
         currentSongIdx = currentSongIdx + 1
         self.currentSong = songs[currentSongIdx]
-        lyricsProvider.loadTrack(self.currentSong?.trackID ?? 0)
+        
+
+        self.lyrics = lyricsProvider.lyrics.value.first(where: {
+            $0.trackID == self.currentSong?.trackID
+        })?.snippetBody ?? " "
+        
+        self.artists.value = self.randomArtists()
     }
 }
