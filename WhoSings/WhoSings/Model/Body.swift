@@ -27,6 +27,10 @@ extension Model {
         struct LyricsContainer: Codable {
             let lyrics: Lyrics
         }
+        
+        struct SnippetContainer: Codable {
+            let snippet: Snippet
+        }
     }
     
     struct TrackList: Codable {

@@ -9,21 +9,23 @@ import Foundation
 import ReactiveSwift
 
 class LyricsProvider {
-    let lyrics: MutableProperty<[Model.Lyrics]> = MutableProperty<[Model.Lyrics]>([])
+    let lyrics: MutableProperty<[Model.Snippet]> = MutableProperty<[Model.Snippet]>([])
     let lyricsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
     private let lyricsID: MutableProperty<Int>
-    private let apiClient: APIClient = ApiClientLocal()
- //   private let apiClient: APIClient = APIClientAlamofire()
+    
+//    private let apiClient: APIClient = ApiClientLocal()
+    private let apiClient: APIClient = APIClientAlamofire()
     
     init(track: Int) {
+        print("LyricsProvider: Track = \(track)")
         lyricsID = MutableProperty<Int>(track)
         lyricsID.producer.startWithValues { value in
-            self.apiClient.execute(API.TrackLyricsGet(value), completion: { result in
+            self.apiClient.execute(API.TrackSnippetGet(value), completion: { result in
                 switch result {
                     case .success(let s) :
                         self.lyrics.value = [s.message
                             .body
-                            .lyrics]
+                            .snippet]
                     
                 default:
                     print("LyricsProvider: Something went wrong")

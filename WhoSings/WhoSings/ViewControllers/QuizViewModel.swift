@@ -45,9 +45,15 @@ class QuizViewModel {
                 !(artists && lyrics)
             }
         
+        isLoading.producer.startWithValues {
+            if (!$0) {
+                self.artists.value = self.randomArtists()
+            }
+        }
+        
         lyricsProvider.lyrics.producer.startWithValues{ value in
-            self.lyrics = value.first?.lyricsBody ?? ""
-            self.artists.value = self.randomArtists()
+            if value.count == 0 { return }
+            self.lyrics = value.first?.snippetBody ?? ""
         }
         
         artists.producer.startWithValues { values in

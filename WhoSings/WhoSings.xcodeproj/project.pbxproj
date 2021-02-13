@@ -24,6 +24,8 @@
 		725DDE4425C8950700304BBC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4325C8950700304BBC /* Message.swift */; };
 		725DDE4925C8A3ED00304BBC /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4825C8A3ED00304BBC /* Body.swift */; };
 		725DDE4F25C942AE00304BBC /* API+chart.tracks-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725DDE4E25C942AE00304BBC /* API+chart.tracks-Tests.swift */; };
+		727DDBC525D7F401007D4B0F /* API+track.snippet.get.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727DDBC425D7F401007D4B0F /* API+track.snippet.get.swift */; };
+		727DDBCA25D7F4C6007D4B0F /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727DDBC925D7F4C6007D4B0F /* Snippet.swift */; };
 		72CE366025CECA4000E485E5 /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE365F25CECA4000E485E5 /* ModelTest.swift */; };
 		72CE367025CED8D600E485E5 /* HighScoresListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE366F25CED8D600E485E5 /* HighScoresListView.swift */; };
 		72CE367825CEE42600E485E5 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CE367725CEE42600E485E5 /* QuizViewModel.swift */; };
@@ -91,6 +93,8 @@
 		725DDE4325C8950700304BBC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		725DDE4825C8A3ED00304BBC /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
 		725DDE4E25C942AE00304BBC /* API+chart.tracks-Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+chart.tracks-Tests.swift"; sourceTree = "<group>"; };
+		727DDBC425D7F401007D4B0F /* API+track.snippet.get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+track.snippet.get.swift"; sourceTree = "<group>"; };
+		727DDBC925D7F4C6007D4B0F /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
 		72CE365F25CECA4000E485E5 /* ModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
 		72CE366F25CED8D600E485E5 /* HighScoresListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresListView.swift; sourceTree = "<group>"; };
 		72CE367725CEE42600E485E5 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				72CE367C25CEF5FE00E485E5 /* Artist.swift */,
 				72CE369125CF0C6600E485E5 /* Lyrics.swift */,
 				72CE383625D6C49600E485E5 /* Score.swift */,
+				727DDBC925D7F4C6007D4B0F /* Snippet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				725DDE3925C8879900304BBC /* API+chart.tracks.get.swift */,
 				72CE368125CEF61200E485E5 /* API+chart.artists.get.swift */,
 				72CE369B25CFEAAD00E485E5 /* API+track.lyrics.get.swift */,
+				727DDBC425D7F401007D4B0F /* API+track.snippet.get.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				72CE373B25D47DCC00E485E5 /* DBProvider.swift in Sources */,
 				72CE369725CFE80500E485E5 /* ArtistsProvider.swift in Sources */,
 				725DDE3A25C8879900304BBC /* API+chart.tracks.get.swift in Sources */,
+				727DDBC525D7F401007D4B0F /* API+track.snippet.get.swift in Sources */,
 				72CE36AB25D1537E00E485E5 /* FontIdentifiers+Utils.swift in Sources */,
 				72CE383725D6C49600E485E5 /* Score.swift in Sources */,
 				72DF163225CEAAB100CBBC76 /* SongsProvider.swift in Sources */,
@@ -596,6 +603,7 @@
 				72CE383C25D6C5A400E485E5 /* HighScoreViewController.swift in Sources */,
 				725DDDD725C87C2200304BBC /* SceneDelegate.swift in Sources */,
 				72CE369C25CFEAAD00E485E5 /* API+track.lyrics.get.swift in Sources */,
+				727DDBCA25D7F4C6007D4B0F /* Snippet.swift in Sources */,
 				725DDE2925C8818700304BBC /* Track.swift in Sources */,
 				72CE36A125D03B0300E485E5 /* LyricsProvider.swift in Sources */,
 				72CE368225CEF61200E485E5 /* API+chart.artists.get.swift in Sources */,

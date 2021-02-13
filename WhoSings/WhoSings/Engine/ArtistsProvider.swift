@@ -17,8 +17,8 @@ class ArtistProvider {
     let artists: MutableProperty<[Model.Artist]> = MutableProperty<[Model.Artist]>([])
     let artistsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
     
-    private let apiClient: APIClient = ApiClientLocal()
- //   private let apiClient: APIClient = APIClientAlamofire()
+//    private let apiClient: APIClient = ApiClientLocal()
+    private let apiClient: APIClient = APIClientAlamofire()
     
     init() {
         apiClient.execute(API.ChartArtistsGet(), completion: { result in
@@ -41,6 +41,7 @@ class ArtistProvider {
     }
 
     func random(winner: Int) -> [Answer]  {
+        if artists.value.count == 0 { return [] }
 
         let a1 = artists.value[Int.random(in: 0...(artists.value.count - 1))]
         let a2 = artists.value[Int.random(in: 0...(artists.value.count - 1))]

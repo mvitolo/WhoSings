@@ -12,8 +12,8 @@ class SongsProvider {
     let songs: MutableProperty<[Model.Track]> = MutableProperty<[Model.Track]>([])
     let songsAreReady: MutableProperty<Bool> = MutableProperty<Bool>(false)
     
-    private let apiClient: APIClient = ApiClientLocal()
-//    private let apiClient: APIClient = APIClientAlamofire()
+//    private let apiClient: APIClient = ApiClientLocal()
+    private let apiClient: APIClient = APIClientAlamofire()
     
     private let numberOfTracks = 3
 

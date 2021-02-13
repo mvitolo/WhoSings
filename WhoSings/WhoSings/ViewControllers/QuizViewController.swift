@@ -63,6 +63,22 @@ class QuizViewController: ViewController {
         super.buildUI()
         view.backgroundColor = .white
                 
+//        viewModel.isLoading.producer
+//            .skipRepeats()
+//            .startWithValues { isLoading in
+//                if isLoading {
+//                    self.loadingBody()
+//                } else {
+                    self.loadedBody()
+//                }
+//            }
+    }
+    
+    private func loadingBody() {
+        
+    }
+    
+    private func loadedBody() {
         self.body {
             UVScrollStack {
                 UVSpace(20)
