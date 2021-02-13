@@ -11,7 +11,7 @@ import UIKitPlus
 
 class MainViewModel {
     private let songProvider = SongsProvider()
-    private let dbProvider = DBProvider()
+    let dbProvider = DBProvider()
     let isLoading = MutableProperty<Bool>(true)
     var isLoggedIn = false
     @UState var welcome: String = "Welcome, Stranger..."
@@ -60,5 +60,4 @@ class MainViewModel {
         loginText = "Please, Login"
         isLoggedIn = false
     }
-    
 }

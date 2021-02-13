@@ -12,6 +12,8 @@ import UIKitPlus
 class QuizViewModel {
     private let artistsProvider = ArtistProvider()
     private let lyricsProvider: LyricsProvider
+    private let dbProvider: DBProvider
+
     let songs: [Model.Track]
     let isLoading = MutableProperty<Bool>(true)
     let lyricsAreReady = MutableProperty<Bool>(false)
@@ -31,7 +33,8 @@ class QuizViewModel {
     
     private var artists = MutableProperty<[ArtistProvider.Answer]>([])
 
-    init(songs: [Model.Track]) {
+    init(songs: [Model.Track], dbProvider: DBProvider) {
+        self.dbProvider = dbProvider
         self.songs = songs
         self.currentSong = songs[currentSongIdx]
         self.lyricsProvider = LyricsProvider(track: currentSong?.artistID ?? 0)
@@ -65,6 +68,10 @@ class QuizViewModel {
     func moveToNextQuiz(_ answer: Int) {
         
         if currentSongIdx == songs.count - 1 {
+            let id = UserDefaults.standard.integer(forKey: "Id")
+            let name = UserDefaults.standard.string(forKey: "Name") ?? ""
+            dbProvider.hitScore(userID: id, userName: name, points: Int(points) ?? 0)
+            
             answer1 = ""
             answer2 = ""
             answer3 = ""
