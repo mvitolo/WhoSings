@@ -22,7 +22,8 @@ class MainViewController: ViewController {
     private let welcome = UText()
     private let start = UButton()
     private let personal = UButton()
-    
+    private let leaderboard = UButton()
+
     override func buildUI() {
         super.buildUI()
         view.backgroundColor = .white
@@ -71,7 +72,15 @@ class MainViewController: ViewController {
                             .alignment(.center)
                             .centerXInSuperview()
 
-
+                        self.leaderboard
+                            .title("Leaderboard 🍾")
+                            .color(.black)
+                            .onTapGesture {
+                                self.pushLeaderboard()
+                            }
+                            .top(to:self.personal, 20)
+                            .alignment(.center)
+                            .centerXInSuperview()
                             
                         
                         UButton(self.viewModel.$loginText)
@@ -116,6 +125,14 @@ class MainViewController: ViewController {
         let uid = UserDefaults.standard.integer(forKey: "Id")
 
         let vm = HighScoresViewModel(uid, dbProvider: viewModel.dbProvider)
+        let qvc = HighScoreViewController(viewModel: vm)
+        
+        self.navigationController?.pushViewController(qvc, animated: true)
+    }
+    
+    func pushLeaderboard() {
+
+        let vm = HighScoresViewModel(nil, dbProvider: viewModel.dbProvider)
         let qvc = HighScoreViewController(viewModel: vm)
         
         self.navigationController?.pushViewController(qvc, animated: true)
