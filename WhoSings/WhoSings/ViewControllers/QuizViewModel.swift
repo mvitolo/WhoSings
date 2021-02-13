@@ -13,6 +13,7 @@ class QuizViewModel {
     private let artistsProvider = ArtistProvider()
     private let lyricsProvider: LyricsProvider
     private let dbProvider: DBProvider
+    private var completed = false
 
     let songs: [Model.Track]
     let isLoading = MutableProperty<Bool>(true)
@@ -50,6 +51,7 @@ class QuizViewModel {
         }
         
         artists.producer.startWithValues { values in
+            if values.count == 0 { return }
             self.answer1 = values[0].name
             self.answer2 = values[1].name
             self.answer3 = values[2].name
@@ -68,6 +70,15 @@ class QuizViewModel {
     func moveToNextQuiz(_ answer: Int) {
         
         if currentSongIdx == songs.count - 1 {
+            if !completed {
+                notification = artists.value[answer].right ? "👍🏻" : "👎🏻"
+                if artists.value[answer].right {
+                    let p = (Int(points) ?? 0) + 1
+                    points = String(p)
+                }
+                completed = true
+            }
+            
             let id = UserDefaults.standard.integer(forKey: "Id")
             let name = UserDefaults.standard.string(forKey: "Name") ?? ""
             dbProvider.hitScore(userID: id, userName: name, points: Int(points) ?? 0)
