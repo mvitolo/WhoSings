@@ -11,7 +11,7 @@ _**1 Card Quiz**_
 > 
 > So I can play the game
 > 
-> The card will show a lyric from one of the 
+> The card will show lyrics from one of the 
 > most rated songs with three buttons
 > to give three possibilities to the user
 
